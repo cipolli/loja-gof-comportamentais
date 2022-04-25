@@ -6,8 +6,8 @@ import br.com.cpl.orcamento.Orcamento;
 
 public class CalculadoraDeImposto {
 
-	public BigDecimal calcular(Orcamento orcamento, TipoImposto tipo) {
+	public BigDecimal calcular(Orcamento orcamento, Imposto imposto) {
 
-		return orcamento.getValor().multiply(tipo.alicotaImposto());
+		return imposto.calcular(orcamento);
 	}
 }
